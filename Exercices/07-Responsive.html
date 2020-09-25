@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Web design</title>
+    <style>
+        body { margin: 0}
+        * { box-sizing: border-box}
+        nav {
+            width: 100%;
+            height: 50px;
+            background-color: #D4AF37;
+            position: fixed;
+            bottom: 0;
+        }
+        .large {display: none} /* Pour cacher les éléments uniquement visible sur grand écran */
+        header img {
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 3em;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            top: calc(50vw - 1em); /* 1 em correspond à la taille réelle du h1 */
+            margin: 0;
+        }
+
+        main {
+            width: 90%;
+            margin: 40px auto;
+        }
+
+        .card {
+            width: 100%;
+            height: 30vh;
+            display: flex;
+            flex-direction: row-reverse;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.65);
+            margin-bottom: 30px;
+        }
+        .card-text {
+            width: 55%;
+        }
+        .card-header {
+            width: 45%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .card-body, .card-footer {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .card-header img { height: 100%}
+
+
+        @media screen and (min-width: 600px) {
+            .large { display: block}
+            .small { display: none}
+            nav {
+                position: sticky;
+                top: 0;
+            }
+            h1 { top: 20vh}
+
+            main {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .card {
+                flex-direction: column;
+                width: 45%;
+                height: 40vh;
+            }
+            .card-header {
+                height: 45%;
+                width: 100%;
+            }
+            .card-text {
+                height: 55%;
+                width: 100%;
+            }
+            .card-body {
+                height: 80%;
+            }
+            .card-body h3 {margin-top: 0}
+            .card-header img {
+                width: 100%;
+                height: auto;
+            }
+
+
+        }
+
+        @media screen and (min-width: 950px) {
+            .card {
+                width: 30%;
+                height: 20vw;
+            }
+            main {
+                width: 75%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mon titre !</h1>
+    <img class="small" src="https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg">
+    <img class="large" src="https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg">
+</header>
+<nav></nav>
+<main>
+    <div class="card">
+        <div class="card-header">
+            <img src="https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg">
+        </div>
+        <div class="card-text">
+            <div class="card-body">
+                <h3>Titre de carte</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="card-footer">
+                <button>Clic clic</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <img src="https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg">
+        </div>
+        <div class="card-text">
+            <div class="card-body">
+                <h3>Titre de carte</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="card-footer">
+                <button>Clic clic</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <img src="https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg">
+        </div>
+        <div class="card-text">
+            <div class="card-body">
+                <h3>Titre de carte</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="card-footer">
+                <button>Clic clic</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <img src="https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg">
+        </div>
+        <div class="card-text">
+            <div class="card-body">
+                <h3>Titre de carte</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="card-footer">
+                <button>Clic clic</button>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
