@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 150vh;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 70%;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 1.7em;
+            color: #28536B;
+            padding-bottom: 20px;
+            border-bottom: solid 2px;
+        }
+
+        .card-deck {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card {
+            width: 350px;
+            height: 450px;
+            box-shadow: 0 0 4px #28536B;
+            border-radius: 5px;
+        }
+
+        .card-header {
+            width: 100%;
+            height: 45%;
+            overflow: hidden;
+        }
+        .card-header img {
+            width: 100%;
+        }
+        .card-body {
+            width: 90%;
+            margin: auto;
+            height: 40%;
+        }
+        .card-footer {
+            width: 90%;
+            margin: auto;
+            height: 15%;
+        }
+
+        .card-footer a:link, a:visited {
+            background-color: #3f83a5;
+            color: white;
+            width: 100%;
+            display: block;
+            padding: 10px 0;
+            text-align: center;
+            text-decoration: none;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border: solid medium white;
+        }
+        .card-footer a:hover {
+            border-color: #3f83a5;
+            font-weight: bold;
+        }
+
+        /*************** Navigation ****************************/
+
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 70%;
+            margin: auto;
+            height: 100%;
+        }
+        li {
+            display: inline-block;
+            margin-left: 25px;
+        }
+
+        nav {
+            height: 50px;
+            box-shadow: 1px 0 5px #28546a;
+            position: sticky;
+            top: 0;
+            background-color: white;
+        }
+
+        nav a:link, nav:visited {
+            font-size: 1.5em;
+            color: #28536B;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            border-top: #A9DDD6 solid medium;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li>
+            <a href="#">Accueil</a>
+        </li>
+        <li>
+            <a href="#">Cours</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h2>Nos parcours diplômants !</h2>
+    <div class="card-deck">
+
+        <div class="card">
+            <div class="card-header">
+                <img src="../assets/images/spacesheep.jpg">
+            </div>
+            <div class="card-body">
+                <h3>Créez une application avec React</h3>
+                <p>Cake sugar plum fruitcake candy canes chocolate jelly beans candy biscuit lollipop. Icing jelly gummi bears pudding. Candy apple pie sweet roll. Muffin caramels I love</p>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn-link">Commencer</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <img src="https://pbs.twimg.com/media/DfkhrO1XUAEYkdw.jpg">
+            </div>
+            <div class="card-body">
+                <h3>Créez une application avec React</h3>
+                <p>Cake sugar plum fruitcake candy canes chocolate jelly beans candy biscuit lollipop. Icing jelly gummi bears pudding. Candy apple pie sweet roll. Muffin caramels I love</p>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn-link">Commencer</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg">
+            </div>
+            <div class="card-body">
+                <h3>Créez une application avec React</h3>
+                <p>Cake sugar plum fruitcake candy canes chocolate jelly beans candy biscuit lollipop. Icing jelly gummi bears pudding. Candy apple pie sweet roll. Muffin caramels I love</p>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn-link">Commencer</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

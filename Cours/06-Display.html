@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Le Display</title>
+
+    <style>
+        div {
+            border: #28536B solid;
+            height: 100px;
+            width: 300px;
+
+        }
+        p {
+            border: #D4AF37 solid;
+            width: 420px;
+            height: 200px;
+        }
+        span {
+            background-color: #A9DDD6;
+            width: 100px;
+            height: 100px;
+            margin: 40px;
+            display: block;
+            font-size: 2em;
+        }
+
+        /*
+        => Inline : ce sont des balises de texte, qui se modifient uniquement en fonction
+        de leur contenu, et qui se mettent en ligne.
+        Pour les centrer : on utilise text-align : center
+        Par défaut, les balises : <button>, <b>, <i>, <span>, <a>, <strong>, <em>, <sub>, <sup>,...
+        => Block : ce sont des balises qui se comportent comme des boîtes qu'on empile.
+        On peut en modifier la taille, et elles se mettent les unes en dessous des autres.
+        Ce sont les balises "container", comme les div, p, articles, main, h1, ul,...
+        Pour les centrer, on utilise margin : x auto;
+        => Inline-block : les images, les médias...
+        Ces balises se mettent à la ligne, mais on peut en modifier la hauteur et largeur.
+        Pour les centrer on peut les mettre en display block et utiliser les margins., ou on les place dans un
+        élément parent de type block, sur lequel on utilise text-align: center.
+
+         */
+
+        img {
+            width: 250px;
+
+
+        }
+
+        .center {
+            text-align: center;
+            width: 100%;
+        }
+
+        button {
+            display: block;
+            width: 70%;
+            margin: 30px auto;
+            padding: 10px 0;
+            background-color: tomato;
+            color: white;
+            text-align: center;
+            border: white solid medium;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        /* Au survol de la souris */
+        button:hover {
+            cursor: pointer;
+            font-weight: bold;
+            border-color: tomato;
+            background-color: white;
+            color: tomato;
+        }
+
+        /* LoVe HAte
+         Il faut impérativement modifier les liens dans cet
+         ordre là, sous peine de bug.
+         */
+        a:link {
+            /* Etat par defaut */
+            color: #D4AF37;
+            text-decoration: none;
+        }
+
+        a:visited {
+            /* en violet par defaut
+            Quand le lien a dejà été visité.
+            */
+            color: #D4AF37;
+            text-decoration: none;
+        }
+
+        a:hover {
+            /* Quand on survole avec la souris */
+            text-decoration: underline;
+
+        }
+
+        a:active {
+            /*
+            Quand on est sur le bouton sans avoir appuyer dessus
+            ( - via le clavier - )
+            On peut le modifier, mais il faut que visuellement, on
+            voit cet état - par defaut c'est la propriété outline )
+             */
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div>Ma Div</div>
+
+    <p>Mon super paragraphe de la mort !
+
+        <button>Cliquez ici!</button>
+
+        <a href="#">Un super lien !</a>
+    </p>
+
+    <p>Mon super paragraphe de la mort <span>avec un span dedans</span></p>
+
+    <p class="center">
+        <img src="../assets/images/spacesheep.jpg">
+        <img src="../assets/images/spacesheep.jpg">
+    </p>
+
+
+
+
+
+
+</body>
+</html>

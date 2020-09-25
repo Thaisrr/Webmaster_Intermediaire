@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exo Boxes 1</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        body * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            background-color: #28536B;
+            padding: 30px;
+            color: white;
+            width: 17vw;
+            height: 17vw;
+            border: solid #D4AF37;
+            border-radius: 5%;
+            margin: 0 auto 50px auto;
+        }
+
+        /* Cible la box qui est le dernier enfant de son parent
+         (ici, la dernière box de container */
+        .box:last-child {
+            margin-bottom: 0;
+        }
+
+        .container {
+            padding-top: 20px;
+            background-color: #A9DDD6;
+            height: 90vh;
+        }
+
+        .top, .bottom {
+            background-color: #D4AF37;
+            width: 100vw;
+            height: 5vh;
+        }
+
+        .bottom {
+            background-color: #28536B;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="top"></div>
+
+<div class="container">
+    <div class="box">Hello World</div>
+    <div class="box">Hello World</div>
+    <div class="box">Hello World</div>
+</div>
+
+<div class="bottom"></div>
+
+</body>
+</html>

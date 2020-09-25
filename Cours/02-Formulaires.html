@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Les formulaires</title>
+</head>
+
+<body>
+
+<form action="" method="post">
+    <p>
+        <!-- Il faut lier l'input et le label grâce aux attributs id et for -->
+        <label for="lastname">Nom</label>
+        <input id="lastname" minlength="2" maxlength="20">
+        <!--
+        Minlength = longueur minimum / Maxlength : longueur maximum
+        -->
+    </p>
+    <p>
+        <!-- On peut préciser le type de caractère / saisie attendue avec l'attribut text -->
+        <label for="firstname">Prénom</label>
+        <input id="firstname" type="text" pattern="[A-Za-z]{2,}">
+        <!-- Pattern : je demande des caractères de A à Z en majuscule ou minuscule, et un minimum de 2 caractères -->
+    </p>
+    <p>
+        <label for="pseudo">Pseudo</label>
+        <input id="pseudo" type="text" placeholder="entrez votre pseudo" name="pseudo" required>
+    </p>
+
+    <p>
+        <label for="password">Mot de passe</label>
+        <input id="password" name="password" type="password">
+    </p>
+
+    <p>
+        <label for="mail">Email</label>
+        <input id="mail" name="mail" type="email">
+    </p>
+
+    <p>
+        <label for="birth">Date de naissance</label>
+        <input type="date" id="birth" name="birth"
+               min="1900-01-30" max="2007-01-01"
+               title="Vous devez avoir plus de 13 ans pour vous inscrire"
+        >
+    </p>
+
+    <p>
+        <label for="age">Age</label>
+        <input id="age" name="age" type="number" min="13" max="120" step="10">
+    </p>
+
+    <p>
+        <label for="tel">Téléphone</label>
+        <input type="tel" name="tel" id="tel" pattern="[0-9]{10}">
+    </p>
+
+    <p>
+        <label for="image">Image de profil</label>
+        <input type="file" id="image" name="image" accept="image/png, image/jpeg, image/*">
+        <small>Formats acceptés : png, jpeg</small>
+    </p>
+
+    <div>
+        <p >Avec votre kebab plutôt ?</p>
+        <label for="salad">Salade</label>
+        <input type="checkbox" id="salad" name="kebab" value="salad">
+
+        <label for="tomato">Tomates</label>
+        <input type="checkbox" id="tomato" name="kebab" value="tomato">
+
+        <label for="onion">Oignons</label>
+        <input type="checkbox" id="onion" name="kebab" value="onion">
+    </div>
+
+    <div>
+        <p>Sur place ou à emporter ?</p>
+
+        <label for="site">Sur place</label>
+        <input type="radio" id="site" name="preference" value="site">
+
+        <label for="away">A emporter</label>
+        <input type="radio" id="away" name="preference" value="away">
+    </div>
+
+    <div>
+        <label for="pet">Quels sont vos animaux préférés ?</label>
+        <select id="pet" name="pet" >
+            <option value="0">--- Veuillez choisir une option</option>
+            <optgroup label="Animaux Familiers">
+                <option value="croco">Crocodile</option>
+                <option value="squall">Requin Marteau</option>
+                <option value="unicorn">Licorne</option>
+            </optgroup>
+            <optgroup label="Animaux exotiques">
+                <option value="cat">Chat</option>
+                <option value="goldfish">Poisson rouge</option>
+                <option value="hamster">Hamster</option>
+            </optgroup>
+        </select>
+    </div>
+
+    <div>
+        <label for="msg">Votre message</label>
+        <textarea id="msg" name="msg" minlength="100" maxlength="1000" cols="50" rows="8">Hello !</textarea>
+    <!--
+     cols : largeur du textarea en nombre de caractères
+     row: hauteur du textarea en nombre de lignes
+     -->
+    </div>
+
+    <div>
+        <label for="color">Votre couleur préfèrée</label>
+        <input type="color" id="color" name="color" value="#48B6B9">
+        <!-- La valeur par défaut est #000000 ( noir )
+         renvoie un code couleur hexadecimal
+         -->
+    </div>
+
+    <button type="reset">Reset</button>
+    <button type="submit">Valider</button>
+
+</form>
+
+</body>
+</html>

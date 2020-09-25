@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice CSS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+
+        h1 {
+            background-color: lawngreen; /* Pour la couleur d'arrière plan */
+            text-transform: uppercase; /* Pour mettre le texte en capital */
+            font-family: 'Trade Winds', cursive; /* Le nom de la police voulue, suivie d'une police par défaut en cas de non chargement */
+            font-size: 1.3rem;
+            text-shadow: 2px 1px 5px #aa00aa;
+            font-weight: bold;
+        }
+
+        p {
+            /* Modification globale, 'par défaut', pour mes paragraphes */
+            font-family: sans-serif;
+            font-weight: bold;
+            text-align: right;
+            text-decoration: line-through turquoise wavy; /* type de ligne /  couleur / style de ligne */
+        }
+
+        .green {
+            color: forestgreen;
+        }
+
+        .blue {
+            color: turquoise;
+            text-decoration: forestgreen line-through dotted;
+        }
+
+        nav p {
+            color: blue;
+            background-color: coral;
+        }
+
+
+        /* selectionne les paragraphes qui sont encadrés par une balise Nav */
+        .nav2 {
+            text-align: center;
+            color: red;
+            text-decoration: none;
+        }
+
+        #gold {
+            color: goldenrod;
+            text-align: left;
+            text-indent: 50px; /* l'indentation se fait au debut du texte, et pas du côté où il est aligné */
+        }
+
+
+    </style>
+</head>
+<body>
+
+<nav class="nav1">
+    <p>Test</p>
+</nav>
+
+
+    <nav class="nav2" >
+        <p>Lien 1</p>
+        <p>Lien 2</p>
+        <p>Lien 3</p>
+    </nav>
+
+<h1>Mon titre principal</h1>
+
+<p class="green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, ad amet consequatur cum deleniti dolor
+    dolorem eligendi laboriosam nam nemo optio quae quam ratione unde ut vel, veniam veritatis, voluptates.</p>
+<p class="blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, ad amet consequatur cum deleniti dolor
+    dolorem eligendi laboriosam nam nemo optio quae quam ratione unde ut vel, veniam veritatis, voluptates.</p>
+<p class="green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, ad amet consequatur cum deleniti dolor
+    dolorem eligendi laboriosam nam nemo optio quae quam ratione unde ut vel, veniam veritatis, voluptates.</p>
+<p class="blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, ad amet consequatur cum deleniti dolor
+    dolorem eligendi laboriosam nam nemo optio quae quam ratione unde ut vel, veniam veritatis, voluptates.</p>
+
+<p id="gold">Mon paragraphe spécial</p>
+
+</body>
+</html>

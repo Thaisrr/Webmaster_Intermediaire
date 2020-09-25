@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exo card</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+        .card, .card * {
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .card {
+            width: 350px;
+            height: 400px;
+            box-shadow: 0 0 4px #28536B;
+            border-radius: 5%;
+            margin: 30px;
+        }
+
+        .card-header {
+            height: 40%;
+        }
+
+        .card-body {
+            height: 45%;
+            text-indent: 30px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .card-footer {
+            height: 15%;
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            border-top: solid 1px #28536B;
+            padding-top: 10px;
+        }
+
+        .card-body p::first-letter {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2em;
+
+        }
+
+        .card-header img {
+            width: 100%;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="card-header">
+        <img src="../assets/images/spacesheep.jpg"
+        alt="mouton de l'espace">
+    </div>
+    <div class="card-body">
+        <h3>Des moutons sauvages trouvés sur Venus !</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci, aut autem consequatur debitis.</p>
+    </div>
+    <div class="card-footer">
+        <a href="#">Lire l'article</a>
+    </div>
+</div>
+
+</body>
+</html>

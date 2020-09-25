@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Web Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { margin: 0}
+        * { box-sizing: border-box}
+        .nav {
+            width: 100%;
+            height: 40px;
+            position: sticky;
+            top: 0;
+            background-color: #D4AF37;
+        }
+        .main {
+            width: 90%;
+            margin: auto;
+        }
+        .deck {}
+        .card {
+            width: 100%;
+            height: 90vw;
+            background-color: #A9DDD6;
+            margin-bottom: 30px;
+        }
+
+        /* Pour écrans
+        Et pour les écrans plus grands que 650px
+         */
+        @media screen and (min-width: 650px){
+            .deck {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .card {
+                width: 25vw;
+                max-width: 400px;
+                height: 25vw;
+                max-height: 400px;
+            }
+        }
+
+        /*
+        Pour le responsive :
+        - On fait le CSS par défaut pour téléphone
+        - Ensuite, on modifie au niveau des points de rupture pour plus grand écrans avec les medias queries
+        ( @media screen and (min-width : ..px ) -> Pour les écrans plus larges que x pixels. ).
+        - On met la balise dans meta name='viewport' dans le head du HTML pour pouvoir tester
+        - On utilise des unités de taille relatives : em, vw, vh, %,... pour que les éléments s'adaptent au mieux à l'écran
+        ( il faut prendre en compte le fait que chaque téléphone à une taille bien différente, et un ratio hauteur / largeur différent. )
+        -> Dans les medias queries on peut tout modifier, comme sur n'importe quelle feuille de style :
+        taille, couleurs, positions, marges, padding, display...
+        Pour faire disparaitre un élément : display: none
+
+        @media screen and (max-width: 400px) {
+            Ici ce serait du code pour les écrans
+            plus petit que 400px.
+            Max width est utilisé si on ne fait pas de mobile first
+            -> Le css de base est pour grand écran, et on
+            diminue la taille des médias au fur et à mesure.
+       }
+         */
+
+        /*
+        Pour Exemple Bootstrap - ( mais pas obligatoire )
+        Très petits écran : inférieur ( < ) à 576px
+        Petits écrans : >= 576px
+        Ecrans moyens : >= 768px
+        Grands écrans : >= 960px
+        Très grand écran : >= 1140px
+        */
+
+        /*
+        Pour les écrans plus grand que 1500Px de large
+         */
+        @media screen and (min-width: 1500px){
+            .main {
+                width: 70%;
+            }
+            .card {
+                width: 23%;
+                max-width: 450px;
+                max-height: 450px;
+            }
+
+            .nav {
+                height: 60px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- Mobile First
+    -> On ajoute la balise meta Viewport
+    -->
+
+    <div class="nav"></div>
+
+    <div class="main">
+        <h2>Mon titre</h2>
+        <div class="deck">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+
+</body>
+</html>

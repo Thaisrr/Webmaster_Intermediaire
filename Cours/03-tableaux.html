@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Les Tableaux</title>
+</head>
+<body>
+
+<h1>Les tableaux</h1>
+
+<h2>Tableau simple</h2>
+
+<table border="black">
+    <tr>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+</table>
+
+<table border="black">
+    <thead>
+        <tr>
+            <!-- Lorsque les cellules représentent des titres / noms de colonne ou ligne,
+             on utilise des th ( td est reservé aux datas / données du tableau )-->
+            <th>Nombres impaires</th>
+            <th>Nombres paires</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </tbody>
+</table>
+
+<table border>
+  <!-- Pour selectionner des colonnes -->
+    <colgroup>
+        <col span="2">
+        <col style="background-color: turquoise">
+    </colgroup>
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Quantité</th>
+            <th scope="col">Prix</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" rowspan="2">Pomme</th>
+            <td>3</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Mangue</th>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th scope="row" colspan="2">Total</th>
+            <td>7</td>
+        </tr>
+    </tfoot>
+</table>
+
+</body>
+</html>

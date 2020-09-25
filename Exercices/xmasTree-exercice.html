@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tree</title>
+    <style>
+
+        .tree {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .tree1, .tree2, .tree3, .tronc {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        p {
+            background-color: #104e28;
+            margin: 0;
+            height: 80px;
+            width: 80px;
+        }
+
+        .r {
+            height : 0;
+            width : 0;
+            background-color: rgba(255, 255, 255, 0);
+            border-left : 80px solid transparent;
+            border-bottom : 80px solid #104e28;
+        }
+
+        .l {
+            height : 0;
+            width : 0;
+            background-color: rgba(255, 255, 255, 0);
+            border-right : 80px solid transparent;
+            border-bottom : 80px solid #104e28;
+        }
+
+
+
+        .tronc {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tronc p {
+            background-color: #4e3736;
+        }
+    </style>
+</head>
+<body>
+
+<div class="tree">
+    <div class="tree1">
+        <p class="r"></p>
+        <p class="l"></p>
+    </div>
+    <div class="tree1">
+        <p class="r"></p>
+        <p></p>
+        <p class="l"></p>
+    </div>
+    <div class="tree1">
+        <p class="r"></p>
+        <p></p>
+        <p></p>
+        <p class="l"></p>
+    </div>
+    <div class="tree1">
+        <p class="r"></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p class="l"></p>
+    </div>
+    <div class="tree1">
+        <p class="r"></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p class="l"></p>
+    </div>
+    <div class="tronc">
+        <p></p>
+        <p></p>
+    </div>
+</div>
+</body>
+</html>

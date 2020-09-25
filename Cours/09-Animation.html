@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transition et animation CSS</title>
+    <style>
+        .sheep {
+            width: 200px;
+            transition-property: width;
+            transition-delay: 500ms;
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out ;
+        }
+        .sheep:hover {
+            width: 500px;
+        }
+
+        .btn {
+            display: block;
+            width: 400px;
+            padding: 20px 0;
+            background-color: white;
+            color: #3f83a5;
+            border: solid medium;
+            text-align: center;
+            border-top-right-radius: 18px;
+            border-bottom-left-radius: 18px;
+            box-sizing: border-box;
+            font-size: 3em;
+            transition-property: font-weight, color, background-color;
+            transition-delay: 300ms;
+            transition-duration: 500ms;
+        }
+
+        .btn:hover {
+            background-color: #3f83a5;
+            color: white;
+            font-weight: bold;
+        }
+
+        .color {
+            width: 300px;
+            height: 300px;
+            border: solid medium;
+            animation-name: changeColor;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-delay: 0s;
+            animation-timing-function: linear;
+            animation-play-state: paused;
+        }
+
+        .color:hover {
+            animation-play-state: running;
+        }
+
+        @keyframes changeColor {
+            from {
+                background-color: #A9DDD6;
+                width: 400px;
+                height: 400px;
+            }
+            25% {
+                background-color: #aa00aa;
+                width: 300px;
+                height: 300px;
+            }
+            50% {
+                background-color: chartreuse;
+            }
+            75% {
+                background-color: tomato;
+                width: 500px;
+                height: 500px;
+            }
+            to {
+                background-color: #A9DDD6;
+                width: 400px;
+                height: 400px;
+            }
+        }
+
+        .container {
+            width: 500px;
+            height: 200px;
+            border: solid;
+            overflow: hidden;
+        }
+
+        .moveText {
+            animation-name: move;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            height: 1em;
+            overflow: hidden;
+        }
+
+        @keyframes move {
+            from {
+                margin-left: 500px ;
+            }
+            to {
+                margin-left: -100px;
+            }
+        }
+
+        .bird {
+            background-image: url("https://www.riencomprendu.com/wp-content/uploads/2016/10/twitter-birds.png");
+            width: 150px;
+            height: 150px;
+            border: solid;
+            animation-iteration-count: infinite;
+            animation-duration: 0.4s;
+            animation-timing-function: steps(4);
+            animation-name: fly;
+        }
+
+        @keyframes fly {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -600px 0;
+            }
+        }
+
+        .losange {
+            width: 300px;
+            height: 400px;
+            background-color: purple ;
+            clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50% );
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <img class="sheep" src="../assets/images/spacesheep.jpg">
+
+    <button class="btn">Clic clic !</button>
+
+    <div class="color"></div>
+
+    <div class="container">
+        <p class="moveText">Hello World !</p>
+    </div>
+
+    <div class="bird"></div>
+
+    <div class="losange"></div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Les boxes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            font-size: 2em;
+            background-color: goldenrod;
+            width: 30vw; /* Largeur */
+            height: 30vw; /* Hauteur */
+            /*border-style: solid;
+            border-width: 3px;
+            border-color: turquoise;
+            border-bottom-style: dashed ;
+            border-bottom-color: #aa00aa; */
+            border: solid turquoise 5px;
+            border-radius: 10%; /* Pour faire un cercle : 50% de border radius */
+            /* La marge intérieur : le padding */
+            /*padding: 30px; */ /* 30px tout autour */
+            /* padding-top: 30px; */ /* On peut décomposer avec top / left / right / bottom */
+            padding: 30px 40px; /* 30px en haut et en bas et 40px à droite et à gauche */
+            /* padding: 10px 20px 30px 40px; */ /* Haut droite bas gauche */
+            margin: 40px;
+        }
+
+        .box2, .box3, .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: turquoise;
+            border: solid tomato 5px;
+            box-sizing: border-box;
+            /*
+            Par défaut, la taille de la boîte est calculée par rapport au contenu de l'élément,
+            si on ajoute du padding, ou une bordure, on augmente la taille de l'élément
+            : ex : 100px de width + 20px de padding de chaque côté donc 140px au total, + 5px de bordure => 150px.
+            On peut utiliser la propriété Box Sizing pour modifier ce comportement en demandant à ce que la taille
+            se calcule de bordure à bordure : box-sizing: border-box;
+            La taille total de l'élément sera donc la taille donnée dans les width et heigth.
+            ( attention à ne pas mettre plus de padding que la taille de la boîte ( 50px de padding pour une boîte
+            de 100px au risque d'avoir un comportement inattendu. )
+             */
+        }
+
+        .box3 {
+            padding: 20px;
+        }
+
+        .box4 {
+            border: none;
+        }
+
+        .box5 {
+            width: 70%;
+            height: 400px;
+            background-color: darkorange;
+            padding: 50px;
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .box6 {
+            background-color: darkcyan;
+            width: 50%; /* 50% de la largeur du parent box 5 */
+            height: 50%; /* 50% de la hauteur du parent box5 */
+        }
+        /*
+        Lorsqu'on parle de width et heigth : le pourcentage se réfère à la taille de l'élément parent.
+        width: 50% => 50% de la taille du parent.
+        Si l'élément est à la racine, le parent est body.
+         */
+
+        .box7 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin: 100px auto;
+            /*
+            Pour centrer horizontalement un élément de type box :
+            - Il faut lui donner une largeur inférieur à celle du parent
+            - Mettre les marges droites et gauche en "auto"
+             */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box">Ma div</div>
+
+    <div class="box2">Ma div</div>
+    <div class="box4">Ma div</div>
+    <div class="box3">Ma div</div>
+
+    <div class="box5">
+        <div class="box6"></div>
+    </div>
+
+    <div class="box7"></div>
+
+</body>
+</html>

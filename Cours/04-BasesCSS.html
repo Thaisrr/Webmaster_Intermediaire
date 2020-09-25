@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Le CSS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        body {
+            font-size: 20px;
+        }
+        p {
+            color: turquoise;
+            font-size: 1.2em;
+            font-weight: bolder;
+            font-family: 'Montserrat', SansSerif, sans-serif;
+            /* Le navigateur va essayer de charger la première police, si il ne la trouve pas, il prendra la seconde, et ainsi de suite.
+             Le dernier choix doit être un style de police et non un nom de police : sans-serif, serif, monospace, cursive...
+             */
+            font-style: italic; /* Italique ou oblique */
+            text-align: start;
+            /* Pour l'accessibilité,  il est déconseillé de justifier un texte sur le web */
+            text-decoration-line: underline; /* sous ligné ( underline ), ligne au dessus ( overline ), barrer ( line-through ) */
+            text-decoration-color: gold;
+            text-decoration-style: wavy; /* dotted, solid, dashed... */
+           /* text-decoration: underline gold ;
+           dans la forme contractée, il faut précisé le line, la couleur par défaut sera celle du texte, et le style solid.
+           */
+            text-indent: 30px;
+            line-height: 50px;
+            text-transform: capitalize;
+            /*
+            capitalize : majuscule en début de chaque mots
+            uppercase : tout en majuscule
+            lowercase: tout en minuscule
+            */
+            text-shadow: 0 1px 2px forestgreen;
+            /*
+            Le décalage
+            */
+
+        }
+            /* Font weight :
+            mots clefs : lighter - light - normal - bold - bolder
+            bolder : + gras que le parent
+            bold : en gras
+            Lighter : - gras que le parent
+            light : - gras
+            ou avec des valeurs numériques 200 300 400 500 600
+            */
+
+
+            /*
+            Unités de mesure :
+
+            Relatives :
+            px : pixel -> sa taille dépend de la résolution d'affichage
+            em : 1em = 1 fois la taille par défaut de la police de l'élément
+            % : 100% = 1 em, la taille de l'élément par défaut ( moins utilisé sur le texte )
+            rem : par rapport à la taille de l'élément le plus haut
+            vw -> View Width largeur de la fenêtre
+            vh -> View Heigth : hauteur de la fenêtre
+
+            Absolues :
+            pt : point d'imprimerie : 1/72 d'inch /
+            pc -> le pica : 12 pt
+            cm, mm -> déconseillés
+
+            Unités conseillées pour le texte : em ou rem
+            */
+        /* On met un point avat le selecteur pour indiquer qu'il s'agit d'une classe */
+        .purple {
+            color: purple;
+        }
+
+        #specialParagraphe {
+            color: coral;
+            background-color: darkseagreen;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 class="purple">Le CSS</h1>
+
+    <h2> Modifier le style de la police </h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt, est in minus molestias repellendus!
+        Aperiam assumenda autem cum delectus dolores ea enim excepturi omnis optio ratione. A magni, molestiae.</p>
+
+    <p class="purple">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        A aliquam architecto, beatae eligendi expedita fuga fugit neque obcaecati omnis provident reiciendis reprehenderit.
+        Culpa deleniti impedit molestiae nemo obcaecati vitae voluptate?</p>
+
+    <p class="purple" id="specialParagraphe">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        A aliquam architecto, beatae eligendi expedita fuga fugit neque obcaecati omnis provident reiciendis reprehenderit.
+        Culpa deleniti impedit molestiae nemo obcaecati vitae voluptate?</p>
+
+</body>
+</html>

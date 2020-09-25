@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sprite twitter</title>
+    <style type="text/css">
+
+        body, html { overflow: hidden}
+
+        #twitter{
+            height: 150px;
+            width: 150px;
+            background: url('https://www.riencomprendu.com/wp-content/uploads/2016/10/twitter-birds.png');
+            margin: 150px auto;
+            animation-name: fly;
+            animation-duration: 0.5s;
+            animation-timing-function: steps(4);
+            animation-iteration-count: infinite;
+        }
+
+        .bird-container {
+            width: fit-content;
+            height: fit-content;
+            animation-name: move-bird;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            position: absolute;
+        }
+
+        @keyframes fly {
+            0%{
+                background-position: 0 0;
+            }
+            100%{
+                background-position: -600px 0;
+
+            }
+        }
+        @keyframes move-bird {
+            0% {
+                margin-left: -200px ;
+                margin-top:  80vh;
+                transform: rotate(0deg);
+                ;
+            }
+            25% {
+                transform: rotate(-10deg);
+            }
+
+            60%{
+                transform: rotate(5deg);
+            }
+
+            100% {
+                margin-left: 120vw;
+                margin-top: -20vh;
+                transform: rotate(0deg);
+            }
+        }
+
+        .parent-box {
+            filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.67));
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            border: solid black;
+            background-color: #A9DDD6;
+            box-shadow: 0 0 8px black;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="bird-container">
+    <div id="twitter"></div>
+</div>
+
+<div class="parent-box">
+    <div class="box"></div>
+</div>
+</body>
+</html>

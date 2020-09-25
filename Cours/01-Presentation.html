@@ -1,0 +1,196 @@
+<!DOCTYPE html> <!-- Pour déclarer une page en HTML 5 -->
+<html lang="fr"> <!-- On met notre code entre deux balises html, avec optionnellement, la langue -->
+<!-- Dans le head : on met les informations pour le navigateur -->
+<head>
+    <meta charset="UTF-8"> <!-- L'encodage charset : en UTF-8 pour caractères latin, spéciaux, japonnais, ect...-->
+    <title>Présentation</title> <!-- Le tire de la page -->
+</head>
+
+<!-- Dans le body, on met notre code html : c'est le contenu de la page -->
+<body>
+
+<h1> Présentation</h1>
+
+<h2>Les balises de texte</h2>
+    <!--- Les Balises de texte -->
+
+    <p>Paragraphe : comme son nom l'indique, c'est un paragraphe : donc lorsqu'on écrit plusieurs balises p à la suite,
+on saute de ligne</p>
+    <p>Un deuxième Paragraphe</p>
+    <p> On peut sauter de ligne dans un paragraphe - ou autre balise - <br> grâce aux br, mais dans la mesure du possible
+    il est conseillé d'utiliser plutôt 2 paragraphes, plus facile à modifier en CSS</p>
+
+    <div>On peut écrire directement dans des balises div - division.</div>
+
+    <div>
+        <p>Les balises Div servent également - et surtout - à encadrer d'autres éléments</p>
+        <p>Comme ça.</p>
+    </div>
+
+    <!--- Les titres -->
+    <h1>Titre</h1> <!-- Le titre principale : il est important de bien utiliser les titres dans le bon ordre, pour le référencement -->
+    <h2>Un titre secondaire</h2>
+    <h3>Un titre tertiaire</h3>
+    <h4>Un titre de moindre importance</h4>
+    <h5>Un titre pas important</h5>
+    <h6>Un titre pas important du tout</h6>
+
+    <p>Les balises inlines s'insèrent dans une balise principale, et servent à encadrer un élément pour :
+        <i>mettre en italique, </i>
+        <b>mettre en gras, </b>
+        <mark>surligner le texte, </mark>
+        <sub>mettre en indice, </sub>
+        <sup>mettre en exposant, </sup>
+        <code>indiquer un morceau de code, </code>
+        <span>encadrer sans modifier visuellement par défaut, </span>
+        <strong>mettre en gras et indiquer un mot clef fort au référencement, </strong>
+        <em>mettre en italique, et indique également un mot clef ou une emphase.</em>
+    </p>
+
+    <h2>Les listes</h2>
+
+    <ul>Pour faire une liste simple :
+        <li>On utilise les balises 'ul'</li>
+        <li>Puis on encadre chaque élément de la liste</li>
+        <li>Par une balise 'li'</li>
+    </ul>
+
+    <ol>Une liste ordonnée :
+        <li>Hello world</li>
+        <li>Hello world</li>
+        <li>Hello world</li>
+        <li>Hello world</li>
+    </ol>
+
+<!-- Attribut Déprécié mais fonctionnel -> On préférera utiliser le css pour modifier le type de liste -->
+    <ol type="I">
+        <li>Hello World</li>
+        <li>Hello World</li>
+        <li>Hello World</li>
+    </ol>
+    <ol type="a">
+        <li>Hello World</li>
+        <li>Hello World</li>
+        <li>Hello World</li>
+    </ol>
+    <ol type="A">
+        <li>Hello World</li>
+        <li>Hello World</li>
+        <li>Hello World</li>
+    </ol>
+
+<!-- ------------------------ -->
+
+    <ol reversed>
+        <li>Bonjour le monde</li>
+        <li>Bonjour le monde</li>
+        <li>Bonjour le monde</li>
+        <li>Bonjour le monde</li>
+    </ol>
+    <ol type="A" start="10">
+        <li>Bonjour le monde</li>
+        <li>Bonjour le monde</li>
+        <li>Bonjour le monde</li>
+        <li>Bonjour le monde</li>
+    </ol>
+
+    <ul>
+        <li>Hello !</li>
+        <li> Un item - liste
+            <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ol>
+        </li>
+        <li>Une ligne</li>
+    </ul>
+
+
+    <!-- Liens -->
+
+    <h2>Les liens : </h2>
+
+    <a href="https://www.dawan.fr" target="_blank" rel="noopener noreferrer nofollow">Lien Externe </a>
+    <!-- Dans un lien externe, on va utiliser l'attribut target="_blank" pour ouvrir le lien dans un autre onglet -->
+    <!--
+     Noopener  : pour la sécurité et empêcher les tentatives de pishing via requêtes http
+     Noreferrer : pour la sécurité : à ne pas mettre en cas de partenariat car empêche
+     le référencement avec google analytic du site en lien
+     Nofollow : empêche le "robot" google de suivre le lien lors de l'analyse / scan  du site
+     -->
+    <a href="02-Formulaires.html">Lien interne</a>
+    <a href="../Exercices/test_lien.html">Lien interne dans un autre dossier</a>
+
+    <a href="mailto:trevillon@jehann.fr">trevillon@jehann.fr</a>
+    <a href="tel:0972000000">Téléphone</a>
+
+    <!-- Pour forcer le téchargement d'un fichier : ( attention à bien prévenir l'utilisateur au préalable !!!! ) -->
+    <a href="telechargement.txt" download="hello.txt">Mon fichier texte</a>
+
+
+<p>Dans le cadre d'un menu / une barre de navigation : on met les liens dans une liste non ordonnée,
+qui sera ensuite modifiée en CSS.
+</p>
+
+<h2>Mise en page</h2>
+
+<main>
+    Balise main = contenu principal de la page.
+    Un seul Main par page, qui contient un contenu 'unique'.
+</main>
+<header>
+    Indique un entête :
+    - Entête de la page,
+    - Entêtes dans des sous éléments
+    - Il peut y en avoir plusieurs dans la page, mais 1 par élément de page
+</header>
+<nav>
+    Indique un élément de navigation, il peut y en avoir plusieur dans la page
+</nav>
+
+<!-- Article, section et div sont équivalents, et peuvent être utilisés plusieurs fois dans la page -->
+<section></section>
+<article></article>
+<div></div>
+
+<footer>
+    Peut être utilisé, comme les headers, dans plusieurs éléments de la page, ou en tant que pied de page simple
+</footer>
+<aside>
+    Vient en complément du main, pour indiquer des précisions, une navigation liée, des informations complémentaires...
+</aside>
+
+<h2>Les médias</h2>
+
+<!-- Dans un dossier, on enregistre les images nécéssaires dans un assets/images -->
+<img width="400" src="https://camaraderielimited.fr/wp-content/uploads/2019/11/babyyoda2.jpg"
+     alt="Texte alternatif à l'image, en cas de non chargement, ou pour l'accessibilité">
+
+<video width="400" controls autoplay loop>
+    <!--
+    attributs :
+        controls : pour permettre à l'utilisateur de contrôller la video
+        ( obligatoire pour les normes d'accessibilité )
+        Autoplay : lancement automatique
+        Loop : lecture en boucle
+        muted : la video est mutée par défaut, c'est à l'utilisateur de remettre le son
+        poster : url / lien vers une image de vignette.
+    -->
+    <source src='../assets/videos/BrentRambo.mp4' type="video/mp4">
+    <source src='#' type="video/avi">
+    Votre navigateur ne permet pas de lire la video, vous pouvez la télécharger <a href="#">ici</a>
+</video>
+
+<iframe width="400" src="https://www.youtube.com/embed/nxg4C365LbQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<audio controls loop>
+    <source src="#" type="audio/flak">
+    <source src="../assets/audio/LORN-ANVIL.mp3" type="audio/mp3">
+</audio>
+
+
+
+
+</body>
+</html>
